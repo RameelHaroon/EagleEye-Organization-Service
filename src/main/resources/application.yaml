@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: organizationservice
+  profiles:
+    active: ${PROFILE:default}
+  config:
+    import: "configserver:${CONFIGSERVER_URI:http://localhost:8888}"
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eurekaserver:8761/eureka/
