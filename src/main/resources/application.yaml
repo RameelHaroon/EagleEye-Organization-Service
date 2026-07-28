@@ -17,3 +17,5 @@ eureka:
 logging:
   pattern:
     level: "%5p [${spring.application.name:},%X{correlationId:-}]"
+  level:
+    com.thoughtmechanix: DEBUG
